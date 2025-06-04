@@ -1,0 +1,3 @@
+[submodule "week1_titanic_eda_notebook"]
+	path = week1_titanic_eda_notebook
+	url = https://github.com/Kunal0110/EDA_Analysis.git
