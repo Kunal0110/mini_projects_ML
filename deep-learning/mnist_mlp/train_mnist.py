@@ -87,7 +87,7 @@ def train_one_epoch(model, loader, criterion, optimizer, device):
         loss = criterion(outputs, labels)
         loss.backward()
         
-        # Gradient clipping
+        # Gradient clipping prevents exploding gradients
         torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
         
         optimizer.step()
@@ -165,7 +165,7 @@ def main():
     
     # Cosine annealing scheduler
     scheduler = optim.lr_scheduler.CosineAnnealingWarmRestarts(
-        optimizer, T_0=10, T_mult=2, eta_min=1e-6)
+        optimizer, T_0=10, T_mult=2, eta_min=1e-5)
     
     early_stopper = EarlyStopping(patience=7, min_delta=0.001)
     best_state_dict = None
