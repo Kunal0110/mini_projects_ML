@@ -1,0 +1,23 @@
+[
+  {
+    "model_name": "784-64-64-10",
+    "hidden_dim": 64,
+    "num_params": 55050,
+    "best_val_acc": 0.9711666666666666,
+    "test_acc": 0.9706
+  },
+  {
+    "model_name": "784-128-128-10",
+    "hidden_dim": 128,
+    "num_params": 118282,
+    "best_val_acc": 0.9756666666666667,
+    "test_acc": 0.9755
+  },
+  {
+    "model_name": "784-256-256-10",
+    "hidden_dim": 256,
+    "num_params": 269322,
+    "best_val_acc": 0.9778333333333333,
+    "test_acc": 0.9788
+  }
+]
